@@ -8,13 +8,20 @@ package SimpleRPG;
  *
  * @author yucha
  */
-public class Weapon {
-    String name;
-    int attackBoost; // The amount of attack power that the weapon adds when equipped.
-
-    // Constructor initializes the weapon with a name and attack boost.
-    public Weapon(String name, int attackBoost) {
-        this.name = name;
-        this.attackBoost = attackBoost;
-    }
+class Weapon {
+  String name;
+  int attackBoost;
+  
+  public Weapon(String name , int attackBoost){
+  this.name =name;
+  this.attackBoost = attackBoost;
+  }
+  
+  public String getNmae(){
+  return name;
+  }
+  
+  public int getAttackBoost(){
+  return attackBoost;
+  }
 }

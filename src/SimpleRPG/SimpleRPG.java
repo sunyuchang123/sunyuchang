@@ -5,12 +5,14 @@
 package SimpleRPG;
 
 import java.util.Scanner;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 /**
  *
  * @author yucha
  */
-public class SimpleRPG {
+public class SimpleRPG extends Application{
     
     // This method validates the input ensuring that it is a valid integer.
     private static int safelyParseInt() {
@@ -28,11 +30,12 @@ public class SimpleRPG {
     }
 
     public static void main(String[] args) {
+        launch(args);
         
         // Display the game manual.
         GameManual.printGameManual();
 
-        int startChoice = 0;
+        /*int startChoice = 0;
         // Loop until a valid main menu choice is entered.
         while (startChoice < 1 || startChoice > 3) {
             System.out.println("1. *** Start a new game ***");
@@ -54,7 +57,7 @@ public class SimpleRPG {
         // If a new game is chosen, delete the old save file.
         if (startChoice == 1) {
             Game.deleteSaveFile();
-        }
+        }*/
         // Try to load the game.
         Hero hero = Game.loadGame();
         
@@ -86,5 +89,19 @@ public class SimpleRPG {
         // Start the adventure with the hero.
         Adventure adventure = new Adventure(hero);
         adventure.start();
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        SimpleRPGView simpleRpgView = new SimpleRPGView();
+        Controller controller = new Controller(simpleRpgView, stage);
+        stage.setTitle("Simple RPG");
+        stage.setWidth(1000);
+        stage.setHeight(1000);
+        stage.setScene(simpleRpgView.getScene());
+        stage.show();
+        Display.printGameManual(controller);
+        Display.printMenuChoices(controller);
+        
     }
 }

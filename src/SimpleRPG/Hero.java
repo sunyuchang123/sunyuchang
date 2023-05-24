@@ -4,11 +4,15 @@
  */
 package SimpleRPG;
 
+
+
+import javafx.scene.image.ImageView;
+
 /**
  *
  * @author yucha
  */
-public abstract class Hero {
+public abstract class Hero extends ImageView{
     
     // These variables store the hero's characteristics.
     String name;
@@ -21,6 +25,7 @@ public abstract class Hero {
     int attack;
     int score;
     Inventory inventory;
+    private Location location;
     
     // Constructor for a Hero object.
     public Hero(String name, String type, int health, int strength, 
@@ -46,6 +51,91 @@ public abstract class Hero {
     // Method to calculate the hero's score.
     public void HeroScore() {
         score = level + health + attack;
+    }
+    
+    
+    public String getName(){
+    return name;
+    }
+    
+    public void setName(String name){
+    this.name = name;
+    }
+    
+    public String getType(){
+    return type;
+    }
+    
+    public void setType(String type){
+    this.type = type;
+    }
+    
+    public int getHealth(){
+    return health;
+    }
+    
+    public void setHealth(int health){
+    this.health = health;
+    }
+    
+    public int getStrength(){
+    return strength;
+    }
+    
+    public void setStrength(int strength){
+    this.strength = strength;
+    }
+    
+     public int getAgility(){
+    return agility;
+    }
+    
+    public void setAgility(int agility){
+    this.agility = agility;
+    }
+    
+     public int getWisdom(){
+    return wisdom;
+    }
+    
+    public void setWisdom(int wisdom){
+    this.wisdom = wisdom;
+    }
+    
+     public int getLevel(){
+    return level;
+    }
+    
+    public void setLevel(int level){
+    this.level = level;
+    }
+    
+     public int getAttack(){
+    return attack;
+    }
+    
+    public void setAttack(int attack){
+    this.attack = attack;
+    }
+    
+     public int getScore(){
+    return score;
+    }
+    
+    public void setScore(int score){
+    this.score = score;
+    }
+    
+    public void setInventory(Inventory inventory){
+    this.inventory = inventory;
+    }
+    
+    public Inventory getInventory() {
+        return inventory;
+    }
+    
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
 

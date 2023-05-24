@@ -4,6 +4,7 @@
  */
 package SimpleRPG;
 
+import SimpleRPG.Enemy;
 import java.util.ArrayList;
 import java.util.List;
 

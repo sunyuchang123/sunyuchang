@@ -4,6 +4,8 @@
  */
 package SimpleRPG;
 
+import SimpleRPG.Hero;
+
 /**
  *
  * @author yucha
