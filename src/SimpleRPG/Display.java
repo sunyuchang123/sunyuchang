@@ -9,8 +9,8 @@ package SimpleRPG;
  * @author yucha
  */
 public class Display {
-     public static void printGameManual(Controller controller) {
-         controller.printMessage("        ***** Welcome to the SimpleRPG game *****\n"
+     public static String printGameManual() {
+         return "        ***** Welcome to the SimpleRPG game *****\n"
                 + "In this game, you will create a hero and embark on a journey to\n"
                 + "explore various locations and fight against a range of enemies.\n"
                 + "\n"
@@ -31,17 +31,9 @@ public class Display {
                 + "\n"
                 + "*** Winning & Losing conditions ***\n" 
                 + "- Your hero's health drops to 0 or below, game over.\n" 
-                + "- Your hero reaches level 100, and you win the game.\n");
-    }
+                + "- Your hero reaches level 100, and you win the game.\n";
+     }
      
-     public static void printMenuChoices(Controller controller) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("1. *** Start a new game ***\n");
-        sb.append("2.    ** Resume game **\n");
-        sb.append("3.         * Quit *\n");
-        sb.append("\n");
-        sb.append("Enter your choice: ");
-
-        controller.printMessage(sb.toString());
+     
     }
-}
+

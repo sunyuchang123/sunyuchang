@@ -4,6 +4,7 @@
  */
 package SimpleRPG.start;
 
+import SimpleRPG.Controller;
 import SimpleRPG.SimpleRPGView;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -20,7 +21,12 @@ public class SimpleRPGStart extends Application{
     @Override
     public void start(Stage stage) throws Exception {
     SimpleRPGView simpleRPGview = new SimpleRPGView();
-    
+    Controller controller = new Controller(simpleRPGview, stage);
+        stage.setTitle("Simple RPG");
+        stage.setWidth(1000);
+        stage.setHeight(1000);
+        stage.setScene(simpleRPGview.getScene());
+        stage.show();
     
     }
     

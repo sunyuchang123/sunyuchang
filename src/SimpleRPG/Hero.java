@@ -6,13 +6,15 @@ package SimpleRPG;
 
 
 
+import SimpleRPG.Inventory;
+import SimpleRPG.Location;
 import javafx.scene.image.ImageView;
 
 /**
  *
  * @author yucha
  */
-public abstract class Hero extends ImageView{
+public abstract class Hero {
     
     // These variables store the hero's characteristics.
     String name;

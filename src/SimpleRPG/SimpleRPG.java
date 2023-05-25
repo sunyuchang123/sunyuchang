@@ -33,7 +33,7 @@ public class SimpleRPG extends Application{
         launch(args);
         
         // Display the game manual.
-        GameManual.printGameManual();
+       // GameManual.printGameManual();
 
         /*int startChoice = 0;
         // Loop until a valid main menu choice is entered.
@@ -59,7 +59,7 @@ public class SimpleRPG extends Application{
             Game.deleteSaveFile();
         }*/
         // Try to load the game.
-        Hero hero = Game.loadGame();
+        /*Hero hero = Game.loadGame();
         
         // If no game was loaded (i.e., it's a new game), create a new hero.
         if (hero == null) {
@@ -102,6 +102,11 @@ public class SimpleRPG extends Application{
         stage.show();
         Display.printGameManual(controller);
         Display.printMenuChoices(controller);
-        
+        */
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
